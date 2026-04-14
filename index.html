@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidad - Quid</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Light Theme Palette */
+            --bg-color: #F6F6F6;
+            --card-bg: #FFFFFF;
+            --primary: #748DAE;
+            --secondary: #F5CBCB;
+            --text-main: #1E293B;
+            --text-secondary: #475569;
+            --accent: #9ECAD6;
+            --border: #E2E8F0;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Dark Theme Palette */
+                --bg-color: #0C0F0F;
+                --card-bg: #1A1C1C;
+                --primary: #9ECAD6;
+                --secondary: #F5CBCB;
+                --text-main: #F1F5F9;
+                --text-secondary: #94A3B8;
+                --accent: #748DAE;
+                --border: #334155;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 40px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border: 1px solid var(--border);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 24px;
+            background-color: var(--secondary);
+            margin-right: 12px;
+            border-radius: 4px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+            position: absolute;
+            left: 5px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-box {
+            background-color: var(--bg-color);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 12px 12px 0;
+        }
+
+        .disclaimer-box {
+            background-color: var(--secondary);
+            color: var(--text-main);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px dashed var(--primary);
+            margin-top: 20px;
+        }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+        .cta-text {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                border-radius: 16px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Quid</h1>
+            <p>Política de Privacidad</p>
+            <p><small>Última actualización: 14 de abril de 2026</small></p>
+        </header>
+
+        <section>
+            <p>Bienvenido a <strong>Quid</strong>. Tu privacidad es fundamental para nosotros. Esta Política de Privacidad describe qué datos recopilamos y cómo los utilizamos para ofrecerte la mejor experiencia de aprendizaje diario.</p>
+        </section>
+
+        <section>
+            <h2>1. Información que Recopilamos</h2>
+            <p>Nuestra aplicación utiliza servicios de Google Firebase para funcionar correctamente:</p>
+            <ul>
+                <li><strong>Información de Cuenta:</strong> Correo electrónico y nombre (vía Firebase Authentication) para sincronizar tu progreso entre dispositivos. En algunos casos, se puede habilitar autenticación anónima para uso temporal.</li>
+                <li><strong>Perfil de Usuario:</strong> Almacenamos tus preferencias, categorías de interés y estadísticas de desempeño para personalizar las preguntas diarias.</li>
+                <li><strong>Progreso de Aprendizaje:</strong> Tus respuestas y rachas (streaks) se almacenan para ofrecerte feedback y seguimiento de tu evolución.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Uso de la Inteligencia Artificial</h2>
+            <p>Quid utiliza servicios de Inteligencia Artificial (IA) para generar contenido educativo y validar respuestas.</p>
+            <div class="highlight-box">
+                <p><strong>Privacidad:</strong> Tus datos personales identificables no se comparten con proveedores de IA. Solo enviamos el contenido de las preguntas y tus respuestas de forma anónima para procesar el feedback educativo.</p>
+            </div>
+            
+            <div class="disclaimer-box">
+                <p style="font-weight: 600; margin-bottom: 10px; display: flex; align-items: center;">
+                    <span style="font-size: 1.5rem; margin-right: 10px;">✨</span> 
+                    Descargo de Responsabilidad Educativa
+                </p>
+                <p style="font-size: 0.95rem; margin-bottom: 0;">
+                    En Quid, nos apasiona el conocimiento y utilizamos algoritmos de IA de última generación para curar y evaluar tu aprendizaje. Sin embargo, la tecnología de IA está en constante evolución y puede, en ocasiones, generar información incompleta o inexacta. 
+                    <br><br>
+                    <strong>Importante:</strong> El contenido de Quid tiene fines informativos y de entretenimiento. No sustituye el consejo profesional. Te animamos a mantener un espíritu crítico y contrastar datos críticos con fuentes oficiales.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Servicios de Terceros</h2>
+            <p>Utilizamos proveedores externos que pueden recopilar información utilizada para identificarte de acuerdo a sus propias políticas de privacidad:</p>
+            <ul>
+                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Services (Auth, Firestore, Messaging, Crashlytics)</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Rendimiento y Errores</h2>
+            <p>Utilizamos Firebase Crashlytics para monitorizar la estabilidad. Si la aplicación se cierra inesperadamente, se envía un informe técnico anónimo que incluye:</p>
+            <ul>
+                <li>Modelo del dispositivo y versión del sistema operativo.</li>
+                <li>Punto exacto del código donde ocurrió el error para su pronta solución.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Almacenamiento Local</h2>
+            <p>Utilizamos almacenamiento local (como SharedPreferences) para recordar tus preferencias básicas, como el tema visual (claro/oscuro), si has visto el tutorial de bienvenida y configuraciones de idioma.</p>
+        </section>
+
+        <section>
+            <h2>6. Audio y Vibración</h2>
+            <p>La aplicación utiliza el sistema de vibración y la reproducción de sonidos para mejorar la experiencia de usuario (por ejemplo, al validar noticias o completar desafíos). Puedes gestionar estas preferencias desde los ajustes de tu dispositivo o la aplicación.</p>
+        </section>
+
+        <section>
+            <h2>7. Monetización</h2>
+            <ul>
+                <li><strong>Anuncios:</strong> Podremos mostrar anuncios mediante redes publicitarias (como AdMob), que pueden utilizar identificadores de publicidad.</li>
+                <li><strong>Suscripciones (RevenueCat):</strong> Utilizaremos RevenueCat para gestionar funciones de Quid Pro. Los datos de pago son procesados exclusivamente por las tiendas oficiales.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>8. Retención de Datos</h2>
+            <p>Almacenamos tus datos de progreso mientras tu cuenta esté activa para facilitarte el historial de aprendizaje. Los perfiles anónimos o temporales se mantienen mientras la aplicación esté instalada o según los periodos de limpieza de Firebase.</p>
+        </section>
+
+        <section>
+            <h2>9. Tus Derechos y Borrado de Datos</h2>
+            <p>Puedes solicitar el borrado de tu cuenta y datos asociados, contáctanos si lo necesitas.</p>
+        </section>
+
+        <section>
+            <h2>10. Contacto</h2>
+            <p>Para dudas sobre esta política, puedes contactarnos en:</p>
+            <p class="cta-text">bobkyledev@gmail.com</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Quid - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
