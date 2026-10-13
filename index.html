@@ -179,37 +179,40 @@
         <header>
             <h1>Quid</h1>
             <p>Política de Privacidad</p>
-            <p><small>Última actualización: 14 de abril de 2026</small></p>
+            <p><small>Última actualización: 13 de octubre de 2026</small></p>
         </header>
 
         <section>
-            <p>Bienvenido a <strong>Quid</strong>. Tu privacidad es fundamental para nosotros. Esta Política de Privacidad describe qué datos recopilamos y cómo los utilizamos para ofrecerte la mejor experiencia de aprendizaje diario.</p>
+            <p>Bienvenido a <strong>Quid</strong>. Tu privacidad es fundamental para nosotros. Esta Política de Privacidad describe qué datos recopilamos, para qué los usamos y con quién los compartimos.</p>
         </section>
 
         <section>
             <h2>1. Información que Recopilamos</h2>
-            <p>Nuestra aplicación utiliza servicios de Google Firebase para funcionar correctamente:</p>
+            <p>Quid guarda tus datos en Google Firebase para que tu progreso esté disponible en todos tus dispositivos:</p>
             <ul>
-                <li><strong>Información de Cuenta:</strong> Correo electrónico y nombre (vía Firebase Authentication) para sincronizar tu progreso entre dispositivos. En algunos casos, se puede habilitar autenticación anónima para uso temporal.</li>
-                <li><strong>Perfil de Usuario:</strong> Almacenamos tus preferencias, categorías de interés y estadísticas de desempeño para personalizar las preguntas diarias.</li>
-                <li><strong>Progreso de Aprendizaje:</strong> Tus respuestas y rachas (streaks) se almacenan para ofrecerte feedback y seguimiento de tu evolución.</li>
+                <li><strong>Cuenta:</strong> si inicias sesión con Google, Apple o correo electrónico, guardamos tu correo y tu identificador de usuario (vía Firebase Authentication). También puedes usar Quid sin registrarte, con una cuenta anónima.</li>
+                <li><strong>Perfil:</strong> tu apodo (al principio, el nombre de tu cuenta de Google o Apple, si lo hay; puedes cambiarlo), tu foto de perfil si eliges subir una (se guarda en Firebase Storage), tu idioma, tu zona horaria, la hora de tu recordatorio diario, las categorías que eliges o creas y la dificultad de las preguntas.</li>
+                <li><strong>Progreso:</strong> las preguntas que recibes, tus respuestas, la puntuación (XP), el nivel, las rachas y tus estadísticas.</li>
+                <li><strong>Notificaciones:</strong> si aceptas recibirlas, guardamos el identificador de notificaciones de tu dispositivo (Firebase Cloud Messaging) para enviarte el recordatorio diario.</li>
+                <li><strong>Suscripción:</strong> si tienes Quid Pro, guardamos si tu suscripción está activa. Ese dato lo obtenemos de RevenueCat (ver sección 8).</li>
             </ul>
         </section>
 
         <section>
             <h2>2. Uso de la Inteligencia Artificial</h2>
-            <p>Quid utiliza servicios de Inteligencia Artificial (IA) para generar contenido educativo y validar respuestas.</p>
+            <p>Quid usa la API de OpenAI para generar las preguntas, corregir tus respuestas y escribir las explicaciones. La aplicación nunca se conecta directamente con OpenAI: lo hacen nuestros servidores (Firebase Cloud Functions).</p>
             <div class="highlight-box">
-                <p><strong>Privacidad:</strong> Tus datos personales identificables no se comparten con proveedores de IA. Solo enviamos el contenido de las preguntas y tus respuestas de forma anónima para procesar el feedback educativo.</p>
+                <p><strong>Qué enviamos:</strong> la pregunta, tu respuesta, el nombre de la categoría (incluidas las categorías que creas tú), el idioma y la dificultad.</p>
+                <p style="margin-bottom: 0;"><strong>Qué no enviamos:</strong> tu nombre, tu correo ni tu identificador de usuario. Te recomendamos no escribir datos personales en tus respuestas ni en los nombres de tus categorías.</p>
             </div>
-            
+
             <div class="disclaimer-box">
                 <p style="font-weight: 600; margin-bottom: 10px; display: flex; align-items: center;">
-                    <span style="font-size: 1.5rem; margin-right: 10px;">✨</span> 
+                    <span style="font-size: 1.5rem; margin-right: 10px;">✨</span>
                     Descargo de Responsabilidad Educativa
                 </p>
                 <p style="font-size: 0.95rem; margin-bottom: 0;">
-                    En Quid, nos apasiona el conocimiento y utilizamos algoritmos de IA de última generación para curar y evaluar tu aprendizaje. Sin embargo, la tecnología de IA está en constante evolución y puede, en ocasiones, generar información incompleta o inexacta. 
+                    En Quid, nos apasiona el conocimiento y utilizamos algoritmos de IA de última generación para curar y evaluar tu aprendizaje. Sin embargo, la tecnología de IA está en constante evolución y puede, en ocasiones, generar información incompleta o inexacta.
                     <br><br>
                     <strong>Importante:</strong> El contenido de Quid tiene fines informativos y de entretenimiento. No sustituye el consejo profesional. Te animamos a mantener un espíritu crítico y contrastar datos críticos con fuentes oficiales.
                 </p>
@@ -218,16 +221,19 @@
 
         <section>
             <h2>3. Servicios de Terceros</h2>
-            <p>Utilizamos proveedores externos que pueden recopilar información utilizada para identificarte de acuerdo a sus propias políticas de privacidad:</p>
+            <p>Estos proveedores tratan datos para que Quid funcione, cada uno según su propia política de privacidad:</p>
             <ul>
-                <li><a href="https://www.google.com/policies/privacy/" target="_blank">Google Play Services</a></li>
-                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Firebase Services (Auth, Firestore, Messaging, Crashlytics)</a></li>
+                <li><a href="https://firebase.google.com/support/privacy" target="_blank">Google Firebase</a> (Authentication, Firestore, Storage, Cloud Functions, Cloud Messaging, Crashlytics, Analytics y App Check, que comprueba que las peticiones llegan desde la aplicación auténtica).</li>
+                <li><a href="https://policies.google.com/privacy" target="_blank">Google</a> (inicio de sesión con Google y anuncios con AdMob).</li>
+                <li><a href="https://www.apple.com/legal/privacy/" target="_blank">Apple</a> (inicio de sesión con Apple).</li>
+                <li><a href="https://openai.com/policies/privacy-policy/" target="_blank">OpenAI</a> (generación y corrección de preguntas; ver sección 2).</li>
+                <li><a href="https://www.revenuecat.com/privacy/" target="_blank">RevenueCat</a> (gestión de las suscripciones a Quid Pro).</li>
             </ul>
         </section>
 
         <section>
             <h2>4. Rendimiento y Errores</h2>
-            <p>Utilizamos Firebase Crashlytics para monitorizar la estabilidad. Si la aplicación se cierra inesperadamente, se envía un informe técnico anónimo que incluye:</p>
+            <p>Utilizamos Firebase Crashlytics para monitorizar la estabilidad. Si la aplicación se cierra inesperadamente, se envía un informe técnico que no incluye tu nombre, tu correo ni tu identificador de usuario. El informe incluye:</p>
             <ul>
                 <li>Modelo del dispositivo y versión del sistema operativo.</li>
                 <li>Punto exacto del código donde ocurrió el error para su pronta solución.</li>
@@ -235,41 +241,59 @@
         </section>
 
         <section>
-            <h2>5. Almacenamiento Local</h2>
-            <p>Utilizamos almacenamiento local (como SharedPreferences) para recordar tus preferencias básicas, como el tema visual (claro/oscuro), si has visto el tutorial de bienvenida y configuraciones de idioma.</p>
-        </section>
-
-        <section>
-            <h2>6. Audio y Vibración</h2>
-            <p>La aplicación utiliza el sistema de vibración y la reproducción de sonidos para mejorar la experiencia de usuario (por ejemplo, al validar noticias o completar desafíos). Puedes gestionar estas preferencias desde los ajustes de tu dispositivo o la aplicación.</p>
-        </section>
-
-        <section>
-            <h2>7. Monetización</h2>
+            <h2>5. Analítica de Uso</h2>
+            <p>Utilizamos Google Analytics para Firebase para saber qué funciones de Quid Pro interesan más y mejorar cómo las presentamos. Solo medimos tu interacción con la pantalla de Quid Pro:</p>
             <ul>
-                <li><strong>Anuncios:</strong> Podremos mostrar anuncios mediante redes publicitarias (como AdMob), que pueden utilizar identificadores de publicidad.</li>
-                <li><strong>Suscripciones (RevenueCat):</strong> Utilizaremos RevenueCat para gestionar funciones de Quid Pro. Los datos de pago son procesados exclusivamente por las tiendas oficiales.</li>
+                <li>Cuándo se muestra la pantalla y qué función la abrió (por ejemplo, el historial o la explicación de una pregunta).</li>
+                <li>Qué opción eliges: ver Quid Pro, ver un anuncio o cerrarla.</li>
+            </ul>
+            <div class="highlight-box">
+                <p><strong>Lo que no hacemos:</strong> no enviamos tu identificador de usuario, tu correo ni tus respuestas a la analítica, y no la usamos con el identificador de publicidad ni para personalizar anuncios.</p>
+                <p style="margin-bottom: 0;"><strong>Tu consentimiento:</strong> la analítica sigue tu elección en el formulario de consentimiento de anuncios. Donde la ley exige consentimiento (por ejemplo, en el Espacio Económico Europeo y el Reino Unido), solo se activa si lo aceptas. Puedes cambiar tu elección en cualquier momento desde las opciones de privacidad en los Ajustes de la aplicación.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Almacenamiento Local</h2>
+            <p>Guardamos en tu dispositivo (SharedPreferences) algunas preferencias: el tema (claro u oscuro), la fuente, el idioma y si ya has visto la introducción. El formulario de consentimiento de anuncios también guarda tu elección en el dispositivo.</p>
+        </section>
+
+        <section>
+            <h2>7. Vibración</h2>
+            <p>La aplicación usa una vibración breve en algunas animaciones, como la de la racha. No reproduce sonidos ni accede al micrófono.</p>
+        </section>
+
+        <section>
+            <h2>8. Monetización</h2>
+            <ul>
+                <li><strong>Anuncios (Google AdMob):</strong> puedes ver un anuncio voluntario para desbloquear algunas funciones. AdMob puede usar el identificador de publicidad de tu dispositivo. Antes de mostrar anuncios te pedimos el consentimiento donde la ley lo exige y, en iPhone, el permiso de seguimiento de Apple (App Tracking Transparency). Los anuncios personalizados dependen de esa elección.</li>
+                <li><strong>Suscripciones (RevenueCat):</strong> RevenueCat gestiona Quid Pro y asocia tus compras a tu identificador de usuario de Quid. Los pagos los procesan exclusivamente Google Play o la App Store; nosotros no vemos tus datos de pago, solo si tu suscripción está activa.</li>
             </ul>
         </section>
 
         <section>
-            <h2>8. Retención de Datos</h2>
-            <p>Almacenamos tus datos de progreso mientras tu cuenta esté activa para facilitarte el historial de aprendizaje. Los perfiles anónimos o temporales se mantienen mientras la aplicación esté instalada o según los periodos de limpieza de Firebase.</p>
+            <h2>9. Retención de Datos</h2>
+            <p>Guardamos tus datos mientras tu cuenta exista, para que conserves tu historial y tu progreso. Esto incluye las cuentas anónimas: si desinstalas la aplicación sin vincular tu cuenta, pierdes el acceso, pero los datos se conservan hasta que nos pidas borrarlos.</p>
         </section>
 
         <section>
-            <h2>9. Tus Derechos y Borrado de Datos</h2>
-            <p>Puedes solicitar el borrado de tu cuenta y datos asociados, contáctanos si lo necesitas.</p>
+            <h2>10. Tus Derechos y Borrado de Datos</h2>
+            <p>Puedes borrar tu cuenta desde la propia aplicación: <strong>Ajustes → Borrar mi perfil</strong>. Esto elimina tu historial de preguntas, tu perfil y tu cuenta.</p>
+            <ul>
+                <li>Si subiste una foto de perfil, escríbenos para borrarla también.</li>
+                <li>Borrar la cuenta no cancela tu suscripción a Quid Pro. Cancélala en Google Play o en la App Store.</li>
+                <li>También puedes escribirnos para acceder a tus datos, corregirlos o pedir una copia.</li>
+            </ul>
         </section>
 
         <section>
-            <h2>10. Contacto</h2>
+            <h2>11. Contacto</h2>
             <p>Para dudas sobre esta política, puedes contactarnos en:</p>
             <p class="cta-text">bobkyledev@gmail.com</p>
         </section>
 
         <footer>
-            <p>&copy; 2024 Quid - Todos los derechos reservados.</p>
+            <p>&copy; 2024–2026 Quid - Todos los derechos reservados.</p>
         </footer>
     </div>
 
